@@ -1,0 +1,1 @@
+FACTURE | 2026-01-13 | Client=cenes | HT=2.0 | TVA=0.4 | TTC=2.4
