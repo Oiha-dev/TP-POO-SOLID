@@ -5,7 +5,7 @@ public class MainDip {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        NotificationService service = new NotificationService();
+        INotificationService service = new NotificationService();
 
         while (true) {
             System.out.println("\n--- MENU ---");
