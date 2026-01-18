@@ -5,21 +5,17 @@ public class MainLsp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Affichable compte = choisirCompte(scanner);
+        CompteBancaire compte = choisirCompte(scanner);
 
-        if (compte instanceof Debiteable) {
-            System.out.print("Montant à retirer : ");
-            double montant = lireDouble(scanner);
-            ((Debiteable) compte).retirer(montant);
-        } else {
-            System.out.println("Ce type de compte ne permet pas les retraits.");
-            System.out.println("Solde actuel : " + compte.getSolde());
-        }
+        System.out.print("Montant à retirer : ");
+        double montant = lireDouble(scanner);
+
+        compte.retirer(montant);
 
         scanner.close();
     }
 
-    private static Affichable choisirCompte(Scanner scanner) {
+    private static CompteBancaire choisirCompte(Scanner scanner) {
         System.out.println("\n--- TYPE DE COMPTE ---");
         System.out.println("1. Compte courant");
         System.out.println("2. PEL");
